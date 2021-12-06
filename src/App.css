@@ -1,12 +1,10 @@
-.App {
+.app {
   width: 300px;
   height: 500px;
   background-color: #000;
   margin: auto;
- top:0;
- position: relative;
- 
- 
+  top:0;
+  position: relative;
 }
 
 .input{
@@ -15,6 +13,7 @@
   bottom: 8px;
   display: flex;
 }
+
 .addTodo{
   margin:auto ;
   width: 90%;
@@ -27,51 +26,69 @@
   color: #ccc;
   font-weight: 200;
   border-radius: 4px;
-  
-
 }
-.fa-check-circle{
+
+.fas.fa-check-circle{
   font-size: 14px;
   padding-right: 8px;
   color: aqua;
 }
+
+.far.fa-check-circle{
+  font-size: 14px;
+  padding-right: 8px;
+  color:#fff;
+}
+
 .fa-circle{
   padding-right: 8px;
 }
-.name{
+
+.text{
   text-decoration-line: line-through;
 }
-.component{
-height: 90%;
-position: absolute;
-width: 100%;
-overflow: hidden;
+
+.todo-list{
+  height: 90%;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
 }
+
 .header{
- background-color: rgb(80, 71, 71);
+  background-color: rgb(80, 71, 71);
   color: #ccc;
   width: 95%;
   height: 36px;
   border-radius: 4px;
   margin: 8px;
 }
+
 .header>p{
   padding-left: 8px;
   font-size: 18px;
-margin: 0;
-line-height: 36px;
+  margin: 0;
+  line-height: 36px;
 }
-.listitem{
+
+.list-item{
   color: #ccc;
   font-size: 14px;
   margin-left: 16px;
   margin: 8px 16px;
   line-height: 18.4px;
 }
+
 .list{
-  margin-top: 12px;
-  
+  margin-top: 6px;
+  height: 40%;
 }
+
+.list-done{
+  height: 50%;
+
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

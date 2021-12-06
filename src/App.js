@@ -1,35 +1,30 @@
 import { useState } from 'react';
 import './App.css';
-import  Component from './component.js';
-function App() {
- const [text, setText]=useState("");
-const [join, setJoin]=useState([])
+import  Todo from './TodoList.js';
 
-function handleonKeydown(e) {
+function App() {
+const [text, setText]=useState("");
+const [list, setList]=useState([])
+
+function handleOnKeydown(e) {
   console.log(e.key)
   if(e.key=='Enter'){
-    setJoin(prev=> [...prev,text])
-    console.log(join)
+    setList(prev=> [...prev,text])
     setText("")
   }
-  
 }
 
-
   return (
-    <div className="App">
-      <Component
-      list={join}
-    
-      
-      ></Component>
-
+    <div className="app">
+      <Todo
+      list={list}
+      ></Todo>
       <div className="input">
-      <input id="addTodo" className="addTodo" on placeholder="Add new Todo" value={text} onKeyDown={handleonKeydown} onChange={e=>setText(e.target.value)}></input>
+        <input id="addTodo" className="addTodo" 
+          placeholder="Add new Todo" value={text}
+          onKeyDown={handleOnKeydown} onChange={e=>setText(e.target.value)}>
+        </input>
       </div>
-   
-    
-    
     </div>
   );
 }
